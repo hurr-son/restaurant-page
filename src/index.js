@@ -1,1 +1,3 @@
-console.log('Cool')
+import './style.css';
+
+
