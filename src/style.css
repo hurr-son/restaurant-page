@@ -16,10 +16,12 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	vertical-align: baseline;
 }
 
+body {
+	color: white;
+}
 
 .cover-img {
     position: absolute;
@@ -28,4 +30,7 @@ time, mark, audio, video {
 	height: 100%;
     z-index: -2;
 }
+
+
+
 
