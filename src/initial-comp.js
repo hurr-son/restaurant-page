@@ -27,6 +27,10 @@ function welcome() {
 }
 
 function hours() {
+    const hoursWrapEl = document.createElement('div');
+    hoursWrapEl.classList.add('hours-wrapper');
+    
+
 
 }
 
