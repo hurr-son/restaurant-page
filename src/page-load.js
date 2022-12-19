@@ -1,4 +1,4 @@
-import { header, welcome, hours, location} from './initial-comp';
+import { header, welcome, hours, location} from './home-comp';
 
 import image from './images/milkyway.jpg';
 
@@ -21,4 +21,4 @@ content.appendChild(location())
 }
 
 
-export {initLoad};
+export { initLoad };
