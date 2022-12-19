@@ -1,7 +1,8 @@
 import './style.css';
-import { homeLoad, initLoad } from './page-load';
+import { homeLoad, initLoad, menuLoad } from './page-load';
 
 initLoad()
 homeLoad()
+menuLoad()
 
 
