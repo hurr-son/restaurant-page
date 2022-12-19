@@ -1,18 +1,50 @@
 
 
-function header(){
+// function header() {
+//     const headerWrapEl = document.createElement('div');
+//     headerWrapEl.classList.add('header-wrapper');
+//     const headerEl = document.createElement('h1');
+//     headerEl.innerText = 'Next to the Wormhole';
+//     headerEl.classList.add('res-title');
+//     headerWrapEl.appendChild(headerEl)
+//     return headerWrapEl;
+// }
+
+function createNavbar() {
+    const navbarWrapEl = document.createElement('div');
+    navbarWrapEl.classList.add('navbar-wrapper');
+    
+    const navbarEl = document.createElement('ul');
+    const homeEl = document.createElement('li');
+    const menuEl = document.createElement('li');
+    const contactEl = document.createElement('li');
+
+    homeEl.classList.add('home');
+    menuEl.classList.add('menu');
+    contactEl.classList.add('contact');
+    
+    homeEl.innerText = 'Home';
+    menuEl.innerText = 'Menu';
+    contactEl.innerText = 'Contact';
+
+    navbarEl.appendChild(homeEl);
+    navbarEl.appendChild(menuEl);
+    navbarEl.appendChild(contactEl);
+
     const headerWrapEl = document.createElement('div');
     headerWrapEl.classList.add('header-wrapper');
     const headerEl = document.createElement('h1');
     headerEl.innerText = 'Next to the Wormhole';
     headerEl.classList.add('res-title');
     headerWrapEl.appendChild(headerEl)
-    return headerWrapEl;
+
+    navbarWrapEl.appendChild(headerWrapEl);
+    navbarWrapEl.appendChild(navbarEl);
+    return navbarWrapEl;
 }
 
 
-
-function welcome() {
+function createWelcome() {
     const welcomeWrapEl = document.createElement('div');
     welcomeWrapEl.classList.add('welcome-wrapper');
     const welcomeEl = document.createElement('p');
@@ -26,7 +58,7 @@ function welcome() {
 
 }
 
-function hours() {
+function createHours() {
     const hoursWrapEl = document.createElement('div');
     hoursWrapEl.classList.add('hours-wrapper');
     
@@ -65,7 +97,7 @@ function hours() {
     return hoursWrapEl;
 }
 
-function location() {
+function createLocation() {
     const locationWrapEl = document.createElement('div');
     locationWrapEl.classList.add('location-wrapper');
 
@@ -82,4 +114,4 @@ function location() {
     return locationWrapEl;
 }
 
-export { header, welcome, hours, location };
+export { createNavbar, createWelcome, createHours, createLocation };
