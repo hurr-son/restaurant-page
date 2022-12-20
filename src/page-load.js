@@ -1,5 +1,5 @@
 import { createNavbar, createWelcome, createHours, createLocation} from './home-comp';
-import { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl } from './menu-comp';
+import { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl, createEntreeTitleEl, createBurgEl, createRibEl,createDillaEl } from './menu-comp';
 import image from './images/milkyway.jpg';
 
 
@@ -30,6 +30,12 @@ function menuLoad() {
     content.appendChild(createCalamariEl());
     content.appendChild(createSoupEl());
     content.appendChild(createAntipastoEl());
+    content.appendChild(createEntreeTitleEl());
+    content.appendChild(createBurgEl());
+    content.appendChild(createRibEl());
+    content.appendChild(createDillaEl());
+
+
 }
 
 function contactLoad() {
