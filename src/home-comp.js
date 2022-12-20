@@ -102,4 +102,16 @@ function createLocation() {
     return locationWrapEl;
 }
 
-export { createNavbar, createWelcome, createHours, createLocation };
+function createHomeWrapEl() {
+    const homeWrapEl = document.createElement('div');
+    homeWrapEl.classList.add('home-wrapper');
+
+
+    homeWrapEl.appendChild(createWelcome());
+    homeWrapEl.appendChild(createHours());
+    homeWrapEl.appendChild(createLocation());
+
+    return homeWrapEl;
+}
+
+export { createNavbar, createHomeWrapEl };
