@@ -1,7 +1,6 @@
-import { createNavbar, createWelcome, createHours, createLocation} from './home-comp';
-import { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl, createEntreeTitleEl, createBurgEl, createRibEl,createDillaEl, createDessertTitleEl,
-createPieEl, createParfEl, createBrownieEl, createDrinkTitleEl, createCoolerEl,
-createSpritEl, createWhiskEl } from './menu-comp';
+import { createNavbar, createHomeWrapEl } from './home-comp';
+import { createMenuWrapEl } from './menu-comp';
+import { createContWrapEl } from './contact-comp';
 
 import image from './images/milkyway.jpg';
 
@@ -21,36 +20,18 @@ content.appendChild(createNavbar());
 
 function homeLoad() {
     const content = document.getElementById('content');
-    content.appendChild(createWelcome());
-    content.appendChild(createHours());
-    content.appendChild(createLocation());
+    content.appendChild(createHomeWrapEl());
 }
 
 
 function menuLoad() {
     const content = document.getElementById('content');
-    content.appendChild(createStartTitleEl());
-    content.appendChild(createCalamariEl());
-    content.appendChild(createSoupEl());
-    content.appendChild(createAntipastoEl());
-    content.appendChild(createEntreeTitleEl());
-    content.appendChild(createBurgEl());
-    content.appendChild(createRibEl());
-    content.appendChild(createDillaEl());
-    content.appendChild(createDessertTitleEl());
-    content.appendChild(createPieEl());
-    content.appendChild(createParfEl());
-    content.appendChild(createBrownieEl());
-    content.appendChild(createDrinkTitleEl());
-    content.appendChild(createCoolerEl());
-    content.appendChild(createSpritEl());
-    content.appendChild(createWhiskEl());
-
-
+    content.appendChild(createMenuWrapEl())
 }
 
 function contactLoad() {
-
+    const content = document.getElementById('content');
+    content.appendChild(createContWrapEl());
 }
 
-export { initLoad, homeLoad, menuLoad };
+export { initLoad, homeLoad, menuLoad, contactLoad };
