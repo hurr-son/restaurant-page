@@ -1,3 +1,9 @@
+function createMenuTitleEl() {
+    const menuTitleEl = document.createElement('h2');
+    menuTitleEl.innerText = 'Menu'
+    return menuTitleEl;
+}
+
 function createStartTitleEl() {
     const startTitle = document.createElement('h3');
     startTitle.innerText = 'Starters'
@@ -234,22 +240,29 @@ function createWhiskEl() {
     return whiskCardEl;
 }
 
+function createMenuWrapEl() {
+    const menuWrapEl = document.createElement('div');
+    menuWrapEl.classList.add('menu-wrapper');
+    
+    menuWrapEl.appendChild(createMenuTitleEl());
+    menuWrapEl.appendChild(createStartTitleEl());
+    menuWrapEl.appendChild(createCalamariEl());
+    menuWrapEl.appendChild(createSoupEl());
+    menuWrapEl.appendChild(createAntipastoEl());
+    menuWrapEl.appendChild(createEntreeTitleEl());
+    menuWrapEl.appendChild(createBurgEl());
+    menuWrapEl.appendChild(createRibEl());
+    menuWrapEl.appendChild(createDillaEl());
+    menuWrapEl.appendChild(createDessertTitleEl());
+    menuWrapEl.appendChild(createPieEl());
+    menuWrapEl.appendChild(createParfEl());
+    menuWrapEl.appendChild(createBrownieEl());
+    menuWrapEl.appendChild(createDrinkTitleEl());
+    menuWrapEl.appendChild(createCoolerEl());
+    menuWrapEl.appendChild(createSpritEl());
+    menuWrapEl.appendChild(createWhiskEl());
+    
+    return menuWrapEl;
+}
 
-export { 
-    createStartTitleEl, 
-    createCalamariEl, 
-    createSoupEl, 
-    createAntipastoEl,
-    createEntreeTitleEl,
-    createBurgEl,
-    createRibEl,
-    createDillaEl,
-    createDessertTitleEl,
-    createPieEl,
-    createParfEl,
-    createBrownieEl,
-    createDrinkTitleEl,
-    createCoolerEl,
-    createSpritEl,
-    createWhiskEl
-};
+export { createMenuWrapEl };
