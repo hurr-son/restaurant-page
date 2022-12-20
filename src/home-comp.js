@@ -1,15 +1,3 @@
-
-
-// function header() {
-//     const headerWrapEl = document.createElement('div');
-//     headerWrapEl.classList.add('header-wrapper');
-//     const headerEl = document.createElement('h1');
-//     headerEl.innerText = 'Next to the Wormhole';
-//     headerEl.classList.add('res-title');
-//     headerWrapEl.appendChild(headerEl)
-//     return headerWrapEl;
-// }
-
 function createNavbar() {
     const navbarWrapEl = document.createElement('div');
     navbarWrapEl.classList.add('navbar-wrapper');
