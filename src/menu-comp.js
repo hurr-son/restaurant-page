@@ -117,7 +117,122 @@ function createDillaEl() {
     return dillaCardEl;
 }
 
+function createDessertTitleEl() {
+    const dessertTitle = document.createElement('h3');
+    dessertTitle.innerText = 'Desserts'
+    dessertTitle.classList.add('category-title');
+    return dessertTitle;
+}
 
+
+function createPieEl() {
+    const pieCardEl = document.createElement('div');
+    pieCardEl.classList.add('dishcard');
+    
+    const pieTitle = document.createElement('div');
+    pieTitle.innerText = 'Moon Pie';
+    pieTitle.classList.add('dish-title');
+    
+    const pieEl = document.createElement('p');
+    pieEl.innerText = 'A creamy and rich pie made with Teegarden c moon dust and served with a side of stardust whipped cream';
+    
+    pieCardEl.appendChild(pieTitle);
+    pieCardEl.appendChild(pieEl);
+    
+    return pieCardEl;
+}
+
+function createParfEl() {
+    const parfCardEl = document.createElement('div');
+    parfCardEl.classList.add('dishcard');
+    
+    const parfTitle = document.createElement('div');
+    parfTitle.innerText = 'Planetary Parfait';
+    parfTitle.classList.add('dish-title');
+    
+    const parfEl = document.createElement('p');
+    parfEl.innerText = 'Layers of space-grown fruit, yogurt, and crunchy granola';
+    
+    parfCardEl.appendChild(parfTitle);
+    parfCardEl.appendChild(parfEl);
+    
+    return parfCardEl;
+}
+
+function createBrownieEl() {
+    const brownieCardEl = document.createElement('div');
+    brownieCardEl.classList.add('dishcard');
+    
+    const brownieTitle = document.createElement('div');
+    brownieTitle.innerText = 'Black Hole Brownie';
+    brownieTitle.classList.add('dish-title');
+    
+    const brownieEl = document.createElement('p');
+    brownieEl.innerText = 'A warm, gooey brownie with a molten chocolate center, served with a side of space ice cream';
+    
+    brownieCardEl.appendChild(brownieTitle);
+    brownieCardEl.appendChild(brownieEl);
+    
+    return brownieCardEl;
+}
+
+function createDrinkTitleEl() {
+    const drinkTitle = document.createElement('h3');
+    drinkTitle.innerText = 'Drinks'
+    drinkTitle.classList.add('category-title');
+    return drinkTitle;
+}
+
+function createCoolerEl() {
+    const coolerCardEl = document.createElement('div');
+    coolerCardEl.classList.add('dishcard');
+    
+    const coolerTitle = document.createElement('div');
+    coolerTitle.innerText = 'Cosmic Cooler';
+    coolerTitle.classList.add('dish-title');
+    
+    const coolerEl = document.createElement('p');
+    coolerEl.innerText = 'A refreshing blend of space-grown fruit and spices';
+    
+    coolerCardEl.appendChild(coolerTitle);
+    coolerCardEl.appendChild(coolerEl);
+    
+    return coolerCardEl;
+}
+
+function createSpritEl() {
+    const spritzCardEl = document.createElement('div');
+    spritzCardEl.classList.add('dishcard');
+    
+    const spritzTitle = document.createElement('div');
+    spritzTitle.innerText = 'Starlight Spritzer';
+    spritzTitle.classList.add('dish-title');
+    
+    const spritzEl = document.createElement('p');
+    spritzEl.innerText = 'A sparkling water with a hint of intergalactic flavor';
+    
+    spritzCardEl.appendChild(spritzTitle);
+    spritzCardEl.appendChild(spritzEl);
+    
+    return spritzCardEl;
+}
+
+function createWhiskEl() {
+    const whiskCardEl = document.createElement('div');
+    whiskCardEl.classList.add('dishcard');
+    
+    const whiskTitle = document.createElement('div');
+    whiskTitle.innerText = 'Wormhole Whiskey';
+    whiskTitle.classList.add('dish-title');
+    
+    const whiskEl = document.createElement('p');
+    whiskEl.innerText = 'A smooth, aged whiskey from the planet Teegarden c';
+    
+    whiskCardEl.appendChild(whiskTitle);
+    whiskCardEl.appendChild(whiskEl);
+    
+    return whiskCardEl;
+}
 
 
 export { 
@@ -128,5 +243,13 @@ export {
     createEntreeTitleEl,
     createBurgEl,
     createRibEl,
-    createDillaEl 
+    createDillaEl,
+    createDessertTitleEl,
+    createPieEl,
+    createParfEl,
+    createBrownieEl,
+    createDrinkTitleEl,
+    createCoolerEl,
+    createSpritEl,
+    createWhiskEl
 };
