@@ -59,4 +59,74 @@ function createAntipastoEl() {
 }
 
 
-export { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl };
+function createEntreeTitleEl() {
+    const entreeTitle = document.createElement('h3');
+    entreeTitle.innerText = 'Entrees'
+    entreeTitle.classList.add('category-title');
+    return entreeTitle;
+}
+
+function createBurgEl() {
+    const burgerCardEl = document.createElement('div');
+    burgerCardEl.classList.add('dishcard');
+    
+    const burgerTitle = document.createElement('div');
+    burgerTitle.innerText = 'Wormhole Burger';
+    burgerTitle.classList.add('dish-title');
+    
+    const burgerEl = document.createElement('p');
+    burgerEl.innerText = 'A juicy patty topped with space-aged cheddar, lettuce, tomato, and wormhole sauce on a cosmic bun';
+    
+    burgerCardEl.appendChild(burgerTitle);
+    burgerCardEl.appendChild(burgerEl);
+    
+    return burgerCardEl;
+}
+
+function createRibEl() {
+    const ribCardEl = document.createElement('div');
+    ribCardEl.classList.add('dishcard');
+    
+    const ribTitle = document.createElement('div');
+    ribTitle.innerText = 'Red Dwarf Rib-eye';
+    ribTitle.classList.add('dish-title');
+    
+    const ribEl = document.createElement('p');
+    ribEl.innerText = 'A perfectly grilled rib-eye served with a side of Teegarden c potatoes and gravy';
+    
+    ribCardEl.appendChild(ribTitle);
+    ribCardEl.appendChild(ribEl);
+    
+    return ribCardEl;
+}
+
+function createDillaEl() {
+    const dillaCardEl = document.createElement('div');
+    dillaCardEl.classList.add('dishcard');
+    
+    const dillaTitle = document.createElement('div');
+    dillaTitle.innerText = 'Quasar Quesadilla';
+    dillaTitle.classList.add('dish-title');
+    
+    const dillaEl = document.createElement('p');
+    dillaEl.innerText = 'A crispy quesadilla filled with space-raised chicken, cheese, and veggies, served with a side of galactic salsa';
+    
+    dillaCardEl.appendChild(dillaTitle);
+    dillaCardEl.appendChild(dillaEl);
+    
+    return dillaCardEl;
+}
+
+
+
+
+export { 
+    createStartTitleEl, 
+    createCalamariEl, 
+    createSoupEl, 
+    createAntipastoEl,
+    createEntreeTitleEl,
+    createBurgEl,
+    createRibEl,
+    createDillaEl 
+};
