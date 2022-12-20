@@ -1,8 +1,9 @@
 import './style.css';
-import { homeLoad, initLoad, menuLoad } from './page-load';
+import { homeLoad, initLoad, menuLoad, contactLoad } from './page-load';
 
 initLoad()
 homeLoad()
 menuLoad()
+contactLoad()
 
 
