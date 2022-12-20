@@ -1,5 +1,8 @@
 import { createNavbar, createWelcome, createHours, createLocation} from './home-comp';
-import { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl, createEntreeTitleEl, createBurgEl, createRibEl,createDillaEl } from './menu-comp';
+import { createStartTitleEl, createCalamariEl, createSoupEl, createAntipastoEl, createEntreeTitleEl, createBurgEl, createRibEl,createDillaEl, createDessertTitleEl,
+createPieEl, createParfEl, createBrownieEl, createDrinkTitleEl, createCoolerEl,
+createSpritEl, createWhiskEl } from './menu-comp';
+
 import image from './images/milkyway.jpg';
 
 
@@ -34,6 +37,14 @@ function menuLoad() {
     content.appendChild(createBurgEl());
     content.appendChild(createRibEl());
     content.appendChild(createDillaEl());
+    content.appendChild(createDessertTitleEl());
+    content.appendChild(createPieEl());
+    content.appendChild(createParfEl());
+    content.appendChild(createBrownieEl());
+    content.appendChild(createDrinkTitleEl());
+    content.appendChild(createCoolerEl());
+    content.appendChild(createSpritEl());
+    content.appendChild(createWhiskEl());
 
 
 }
