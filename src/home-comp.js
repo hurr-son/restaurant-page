@@ -3,10 +3,18 @@ function createNavbar() {
     navbarWrapEl.classList.add('navbar-wrapper');
     
     const navbarEl = document.createElement('ul');
-    const homeEl = document.createElement('li');
-    const menuEl = document.createElement('li');
-    const contactEl = document.createElement('li');
+    const homeEl = document.createElement('a');
+    const menuEl = document.createElement('a');
+    const contactEl = document.createElement('a');
 
+    homeEl.href = '#home';
+    menuEl.href = '#menu';
+    contactEl.href = '#contact';
+
+    navbarEl.classList.add('navbar-el');
+    homeEl.classList.add('nav-el');
+    menuEl.classList.add('nav-el');
+    contactEl.classList.add('nav-el');
     homeEl.classList.add('home');
     menuEl.classList.add('menu');
     contactEl.classList.add('contact');
@@ -105,6 +113,7 @@ function createLocation() {
 function createHomeWrapEl() {
     const homeWrapEl = document.createElement('div');
     homeWrapEl.classList.add('home-wrapper');
+    homeWrapEl.classList.add('wrapper');
 
 
     homeWrapEl.appendChild(createWelcome());
