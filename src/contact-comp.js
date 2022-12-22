@@ -63,6 +63,7 @@ function createFormEl() {
 function createContWrapEl() {
     const contactWrapEl = document.createElement('div');
     contactWrapEl.classList.add('contact-wrapper');
+    contactWrapEl.classList.add('wrapper');
 
     contactWrapEl.appendChild(createContactTitleEl());
     contactWrapEl.appendChild(createContactTextEl())
