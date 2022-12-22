@@ -5,33 +5,23 @@ import { createContWrapEl } from './contact-comp';
 import image from './images/milkyway.jpg';
 
 
-function initLoad() {
+function initialEls() {
     
-const content = document.getElementById('content');
+
+const initialWrap = document.createElement('div');
+initialWrap.classList.add('initial-wrapper');
 
 const coverImg = new Image();
 coverImg.src = image;
 coverImg.classList.add('cover-img');
-content.appendChild(coverImg);
-content.appendChild(createNavbar());
+initialWrap.appendChild(coverImg);
+initialWrap.appendChild(createNavbar());
+
+return initialWrap;
 
 }
 
 
-function homeLoad() {
-    const content = document.getElementById('content');
-    content.appendChild(createHomeWrapEl());
-}
 
 
-function menuLoad() {
-    const content = document.getElementById('content');
-    content.appendChild(createMenuWrapEl())
-}
-
-function contactLoad() {
-    const content = document.getElementById('content');
-    content.appendChild(createContWrapEl());
-}
-
-export { initLoad, homeLoad, menuLoad, contactLoad };
+export { initialEls };
