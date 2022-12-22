@@ -243,6 +243,7 @@ function createWhiskEl() {
 function createMenuWrapEl() {
     const menuWrapEl = document.createElement('div');
     menuWrapEl.classList.add('menu-wrapper');
+    menuWrapEl.classList.add('wrapper');
     
     menuWrapEl.appendChild(createMenuTitleEl());
     menuWrapEl.appendChild(createStartTitleEl());
