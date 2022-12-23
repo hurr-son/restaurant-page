@@ -2,11 +2,11 @@
 
 ### The goals of this project:
 
-  -Make a single page restaurant app, that tabs through the various sections without loading.
-  -Work with ES6 modules
-  -Render all DOM elements dynamically
-  -Utilize webpack to bundle the modules
-  -As always, get some CSS practice in
+  - Make a single page restaurant app, that tabs through the various sections without loading.
+  - Work with ES6 modules
+  - Render all DOM elements dynamically
+  - Utilize webpack to bundle the modules
+  - As always, get some CSS practice in
   
   
  ### Reflection
