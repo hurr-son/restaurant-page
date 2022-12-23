@@ -5,46 +5,46 @@ import { createHomeWrapEl } from './home-comp';
 import { createMenuWrapEl } from './menu-comp';
 import { createContWrapEl } from './contact-comp';
 
-const coverImg = new Image();
-coverImg.src = image;
-coverImg.classList.add('cover-img');
-
-const content = document.getElementById('content');
-const homeEls = createHomeWrapEl()
-
-content.appendChild(coverImg);
-content.appendChild(createNavbar());
-content.appendChild(homeEls);
-
-const menuEls = createMenuWrapEl();
-const contactEls = createContWrapEl();
-// content.appendChild(menuEls);
-
-
-
+window.addEventListener('load', function(){
+    const coverImg = new Image();
+    coverImg.src = image;
+    coverImg.classList.add('cover-img');
+    
+    const homeEls = createHomeWrapEl();
+    
+    content.appendChild(coverImg);
+    content.appendChild(createNavbar());
+    content.appendChild(homeEls);
+})
 
 function renderHomeOnClick(e) {
     if(!e.target.classList.contains('home')) {
-        return
+        return;
     }
-        let currentWrap = document.querySelector('.wrapper');   
-        content.replaceChild(homeEls, currentWrap);
+    
+    const homeEls = createHomeWrapEl();
+    let currentWrap = document.querySelector('.wrapper');   
+    content.replaceChild(homeEls, currentWrap);
 }
 
 function renderMenuOnClick(e) {
     if(!e.target.classList.contains('menu')) {
-        return
+        return;
     }
-        let currentWrap = document.querySelector('.wrapper');
-        content.replaceChild(menuEls, currentWrap);
-}
     
+    const menuEls = createMenuWrapEl();
+    let currentWrap = document.querySelector('.wrapper');
+    content.replaceChild(menuEls, currentWrap);
+}
+
 function renderContactOnClick(e) {
     if(!e.target.classList.contains('contact')) {
-        return
+        return;
     }
-        let currentWrap = document.querySelector('.wrapper');
-        content.replaceChild(contactEls, currentWrap);
+    
+    const contactEls = createContWrapEl();
+    let currentWrap = document.querySelector('.wrapper');
+    content.replaceChild(contactEls, currentWrap);
 }
 
 content.addEventListener('click', renderHomeOnClick);
