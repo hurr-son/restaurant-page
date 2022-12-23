@@ -57,7 +57,6 @@ function createStartTitleEl() {
     return startTitle;
 }
 
-
 function createBurgEl() {
     const burgerCardEl = document.createElement('div');
     burgerCardEl.classList.add('dishcard');
