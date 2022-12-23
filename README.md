@@ -12,7 +12,7 @@
  ### Reflection
  
  ES6 modules make development so much streamline. The scripts of my other projects are very much frankensteined together.
- Rendering out of the DOM elements with just Javascript was quite annoying. I'm excited to get started with React,
+ Rendering out of the DOM elements with vanilla Javascript was quite annoying. I'm excited to get started with React,
  as I'm sure it solves some of the headache I was dealing with. It's good to start learning webpack early, but wow,
  is it overwhelming at first. 
  
