@@ -25,6 +25,7 @@ time, mark, audio, video {
 	--main-tx-color: white;
 	--main-bg-color: rgba(0, 0, 0, 0.3);
 	--main-nav-color: rgb(19, 13, 10);
+	--main-hov-color: rgb(162, 140, 133);
 }
 
 body {
@@ -34,9 +35,9 @@ body {
 
 .cover-img {
 	min-height: 100%;
-	min-width: 1080px;
+	min-width: 1920px;
 	width: 100%;
-	height: auto;
+	
 	position: fixed;
 	filter: brightness(50%);
 	top: 0;
@@ -44,12 +45,13 @@ body {
 	z-index: -2;
 }
 
+
+
 /* Styling for the elements on the homepage */
 
 .navbar-wrapper,
 .navbar-el,
 .header-wrapper,
-.wrapper,
 .welcome-wrapper,
 .hours-wrapper,
 .location-wrapper {
@@ -59,7 +61,6 @@ body {
 .navbar-wrapper {
 	align-items: center;
 	justify-content: space-evenly;
-	
 	background-color: var(--main-nav-color);
 	border: 1px solid rgb(141, 141, 141);
 	padding: .5rem;
@@ -88,10 +89,11 @@ h1 {
 	font-size: 2.2rem;
 }
 
-.wrapper {
+.home-wrapper {
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: fit-content;
+	/* min-width: fit-content; */
 	padding-top: 4rem;	
 	
 }
@@ -100,7 +102,7 @@ h1 {
 	flex-wrap: wrap;
 	max-width: 45rem;
 	font-size: 1.6rem;
-	padding-bottom: 2rem;
+	padding-bottom: 4rem;
 }
 
 .hours-wrapper {
@@ -113,7 +115,7 @@ h1 {
 	flex-direction: column;
 	font-size: 1.6rem;
 	max-width: 34rem;
-	padding-bottom: 9rem;
+	padding-bottom: 7rem;
 }
 
 .hours-wrapper h3 {
@@ -135,32 +137,92 @@ li {
 
 .category-wrapper {
 	display: grid;
-	grid-template-columns: .4fr .4fr .4fr .4fr;
+	grid-template-columns: repeat(4, .2fr);
+	justify-content: space-evenly;
+	width: 100%;
 	column-gap: 5rem;
 	row-gap: 1.5rem;
-	padding-top: 2rem;
+	padding-top: 5rem;
+	
 }
 
 .category-title {
-	font-size: 2.5rem;
+	font-size: 1.9rem;
 }
 
 .dish-title {
 	font-size: 1.5rem;
 }
 
-.dishcard p {
-	font-size: larger;
+.dishcard {
+	flex: 1;
+	gap: .75rem;
+	font-size: 1.2rem;
+	padding-bottom: 8rem;
+	flex-wrap: wrap;
 }
 
-.dishcard {
+.starter-wrapper,
+.entree-wrapper,
+.dessert-wrapper,
+.drink-wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: .75rem;
-	padding-bottom: 8rem;
 }
 
+/* Styling for the elements on the Contact Page */
 
+.contact-wrapper,
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
 
+.contact-wrapper h2 {
+	font-size: 3rem;
+}
 
+.contact-wrapper {
+	align-items: center;
+	row-gap: 2rem;
+	padding-top: 5rem;
+}
 
+.contact-form {
+	row-gap: 3rem;
+}
+
+.contact-wrapper > * {
+	min-width: 25rem;
+}
+
+.contact-form > * {
+	font-size: 1.2rem;
+	padding: 5px 3px;
+}
+
+.inquiry-input{
+	resize: vertical;
+	height: 5rem;
+}
+
+.contact-title {
+	text-align: center;
+}
+
+:focus {
+	outline: none;
+}
+
+input:hover {
+	border-color: var(--main-hov-color);
+}
+
+input[type=submit] {
+	font-size: 1.4rem;
+	width: 6rem;
+}
+
+input[type=submit]:hover {
+	transform: translateY(1px);
+}
