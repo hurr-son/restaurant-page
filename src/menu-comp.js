@@ -1,28 +1,14 @@
-function createMenuTitleEl() {
-    const menuTitleEl = document.createElement('h2');
-    menuTitleEl.innerText = 'Menu'
-    return menuTitleEl;
-}
-
-function createStartTitleEl() {
-    const startTitle = document.createElement('h3');
-    startTitle.innerText = 'Starters'
-    startTitle.classList.add('category-title');
-    return startTitle;
-}
-
-
 function createCalamariEl() {
     const calCardEl = document.createElement('div');
     calCardEl.classList.add('dishcard');
-
+    
     const calamariTitle = document.createElement('div');
     calamariTitle.innerText = 'Cosmic Calamari';
     calamariTitle.classList.add('dish-title');
-
+    
     const calamariEl = document.createElement('p');
     calamariEl.innerText = 'Fried calamari served with a side of extraterrestrial aioli';
-
+    
     calCardEl.appendChild(calamariTitle);
     calCardEl.appendChild(calamariEl);
     
@@ -64,13 +50,13 @@ function createAntipastoEl() {
     return antiCardEl;
 }
 
-
-function createEntreeTitleEl() {
-    const entreeTitle = document.createElement('h3');
-    entreeTitle.innerText = 'Entrees'
-    entreeTitle.classList.add('category-title');
-    return entreeTitle;
+function createStartTitleEl() {
+    const startTitle = document.createElement('div');
+    startTitle.innerText = 'Starters'
+    startTitle.classList.add('category-title');
+    return startTitle;
 }
+
 
 function createBurgEl() {
     const burgerCardEl = document.createElement('div');
@@ -123,12 +109,13 @@ function createDillaEl() {
     return dillaCardEl;
 }
 
-function createDessertTitleEl() {
-    const dessertTitle = document.createElement('h3');
-    dessertTitle.innerText = 'Desserts'
-    dessertTitle.classList.add('category-title');
-    return dessertTitle;
+function createEntreeTitleEl() {
+    const entreeTitle = document.createElement('div');
+    entreeTitle.innerText = 'Entrees'
+    entreeTitle.classList.add('category-title');
+    return entreeTitle;
 }
+
 
 
 function createPieEl() {
@@ -182,12 +169,13 @@ function createBrownieEl() {
     return brownieCardEl;
 }
 
-function createDrinkTitleEl() {
-    const drinkTitle = document.createElement('h3');
-    drinkTitle.innerText = 'Drinks'
-    drinkTitle.classList.add('category-title');
-    return drinkTitle;
+function createDessertTitleEl() {
+    const dessertTitle = document.createElement('div');
+    dessertTitle.innerText = 'Desserts'
+    dessertTitle.classList.add('category-title');
+    return dessertTitle;
 }
+
 
 function createCoolerEl() {
     const coolerCardEl = document.createElement('div');
@@ -240,28 +228,71 @@ function createWhiskEl() {
     return whiskCardEl;
 }
 
+function createDrinkTitleEl() {
+    const drinkTitle = document.createElement('div');
+    drinkTitle.innerText = 'Drinks'
+    drinkTitle.classList.add('category-title');
+    return drinkTitle;
+}
+
+function createStarterWrapEl() {
+    const starterWrapEl = document.createElement('div');
+    starterWrapEl.classList.add('starter-wrapper');
+    starterWrapEl.appendChild(createCalamariEl());
+    starterWrapEl.appendChild(createSoupEl());
+    starterWrapEl.appendChild(createAntipastoEl());
+    
+    return starterWrapEl;
+}
+function createEntreeWrapEl() {
+    const entreeWrapEl = document.createElement('div');
+    entreeWrapEl.classList.add('entree-wrapper');
+    entreeWrapEl.appendChild(createBurgEl());
+    entreeWrapEl.appendChild(createRibEl());
+    entreeWrapEl.appendChild(createDillaEl());
+    
+    return entreeWrapEl;
+}
+function createDessertWrapEl() {
+    const dessertWrapEl = document.createElement('div');
+    dessertWrapEl.classList.add('dessert-wrapper');
+    dessertWrapEl.appendChild(createPieEl());
+    dessertWrapEl.appendChild(createParfEl());
+    dessertWrapEl.appendChild(createBrownieEl());
+
+    return dessertWrapEl;
+}
+function createDrinkWrapEl() {
+    const drinkWrapEl = document.createElement('div');
+    drinkWrapEl.classList.add('drink-wrapper');
+    drinkWrapEl.appendChild(createCoolerEl());
+    drinkWrapEl.appendChild(createSpritEl());
+    drinkWrapEl.appendChild(createWhiskEl());
+
+    return drinkWrapEl;
+}
+
+
 function createMenuWrapEl() {
     const menuWrapEl = document.createElement('div');
     menuWrapEl.classList.add('menu-wrapper');
     menuWrapEl.classList.add('wrapper');
+    const categoryDishWrapEl = document.createElement('div');
+    categoryDishWrapEl.classList.add('catdish-wrapper');
+    const categoryWrapEl = document.createElement('div');
+    categoryWrapEl.classList.add('category-wrapper');
     
-    menuWrapEl.appendChild(createMenuTitleEl());
-    menuWrapEl.appendChild(createStartTitleEl());
-    menuWrapEl.appendChild(createCalamariEl());
-    menuWrapEl.appendChild(createSoupEl());
-    menuWrapEl.appendChild(createAntipastoEl());
-    menuWrapEl.appendChild(createEntreeTitleEl());
-    menuWrapEl.appendChild(createBurgEl());
-    menuWrapEl.appendChild(createRibEl());
-    menuWrapEl.appendChild(createDillaEl());
-    menuWrapEl.appendChild(createDessertTitleEl());
-    menuWrapEl.appendChild(createPieEl());
-    menuWrapEl.appendChild(createParfEl());
-    menuWrapEl.appendChild(createBrownieEl());
-    menuWrapEl.appendChild(createDrinkTitleEl());
-    menuWrapEl.appendChild(createCoolerEl());
-    menuWrapEl.appendChild(createSpritEl());
-    menuWrapEl.appendChild(createWhiskEl());
+    
+    
+    categoryWrapEl.appendChild(createStartTitleEl());
+    categoryWrapEl.appendChild(createEntreeTitleEl());
+    categoryWrapEl.appendChild(createDessertTitleEl());
+    categoryWrapEl.appendChild(createDrinkTitleEl());
+    categoryWrapEl.appendChild(createStarterWrapEl())
+    categoryWrapEl.appendChild(createEntreeWrapEl())
+    categoryWrapEl.appendChild(createDessertWrapEl())
+    categoryWrapEl.appendChild(createDrinkWrapEl())
+    menuWrapEl.appendChild(categoryWrapEl);
     
     return menuWrapEl;
 }

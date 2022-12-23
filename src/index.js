@@ -1,16 +1,27 @@
 import './style.css';
-import { initialEls } from './page-load';
+import image from './images/dusty-planet.jpg';
+import { createNavbar } from './home-comp';
 import { createHomeWrapEl } from './home-comp';
 import { createMenuWrapEl } from './menu-comp';
 import { createContWrapEl } from './contact-comp';
 
+const coverImg = new Image();
+coverImg.src = image;
+coverImg.classList.add('cover-img');
+
 const content = document.getElementById('content');
 const homeEls = createHomeWrapEl()
-content.appendChild(initialEls());
+
+content.appendChild(coverImg);
+content.appendChild(createNavbar());
 content.appendChild(homeEls);
 
 const menuEls = createMenuWrapEl();
 const contactEls = createContWrapEl();
+// content.appendChild(menuEls);
+
+
+
 
 function renderHomeOnClick(e) {
     if(!e.target.classList.contains('home')) {

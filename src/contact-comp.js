@@ -5,6 +5,7 @@ function createContactTitleEl() {
     return contactTitle;
 }
 
+
 function createContactTextEl() {
     const contactTextEl = document.createElement('p');
     contactTextEl.classList.add('contact-text');

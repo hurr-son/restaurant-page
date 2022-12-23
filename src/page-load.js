@@ -1,35 +1,32 @@
-import { createNavbar } from './home-comp';
+// import { createNavbar } from './home-comp';
+// import image from './images/dusty-planet.jpg';
 
+// const content = document.getElementById('content');
 
-import image from './images/dusty-planet.jpg';
-
-
-function initialEls() {
+// function initialEls() {
     
 
-const initialWrap = document.createElement('div');
-initialWrap.classList.add('initial-wrapper');
 
-const coverImg = new Image();
-coverImg.src = image;
-coverImg.classList.add('cover-img');
+// const coverImg = new Image();
+// coverImg.src = image;
+// coverImg.classList.add('cover-img');
 
 
-// const credLink = document.createElement('a');
-// credLink.href = "https://unsplash.com/@daniele71043";
-// credLink.innerText = 'Photo by Daniele Colucci';
+// // const credLink = document.createElement('a');
+// // credLink.href = "https://unsplash.com/@daniele71043";
+// // credLink.innerText = 'Photo by Daniele Colucci';
 
 
 
-initialWrap.appendChild(coverImg);
-initialWrap.appendChild(createNavbar());
-
-
-return initialWrap;
-
-}
+// content.appendChild(coverImg);
+// content.appendChild(createNavbar());
 
 
 
 
-export { initialEls };
+// }
+
+
+
+
+// export { initialEls };
