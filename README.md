@@ -18,6 +18,7 @@
  
  Overall, I feel pretty good about how it turned out. These things never feel done, but
  in the future I would like to rebuild the whole thing in React and hook it up to a backend. 
+ I also think it needs a much better design.
  
 
 The cover image is by Daniele Colucci from [Unsplashed](https://unsplash.com/@daniele71043)
