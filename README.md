@@ -20,5 +20,6 @@
  in the future I would like to rebuild the whole thing in React and hook it up to a backend. 
  I also think it needs a much better design.
  
+[Next to the Wormhole](https://hurr-son.github.io/restaurant-page/)
 
 The cover image is by Daniele Colucci from [Unsplashed](https://unsplash.com/@daniele71043)
