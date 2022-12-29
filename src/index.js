@@ -2,8 +2,10 @@ import './style.css';
 import image from './images/dusty-planet.jpg';
 import { createNavbar } from './home-comp';
 import { createHomeWrapEl } from './home-comp';
-import { createMenuWrapEl } from './menu-comp';
+import { createMenu } from './menu-comp';
 import { createContWrapEl } from './contact-comp';
+
+
 
 window.addEventListener('load', function(){
     const coverImg = new Image();
@@ -32,7 +34,7 @@ function renderMenuOnClick(e) {
         return;
     }
     
-    const menuEls = createMenuWrapEl();
+    const menuEls = createMenu();
     let currentWrap = document.querySelector('.wrapper');
     content.replaceChild(menuEls, currentWrap);
 }
