@@ -19,10 +19,8 @@
  Overall, I feel pretty good about how it turned out. These things never feel done, but
  in the future I would like to rebuild the whole thing in React and hook it up to a backend. 
  I also think it needs a much better design.
-<<<<<<< HEAD
-=======
 
- **12/28 EDIT** 
+ **12/28** 
 
  It occurred to me that it would much better if the menu items were tied to data objects and not just simply DOM elements. This seems beneficial for a few reasons:
 
@@ -30,7 +28,6 @@
  - Make it easier to update UI when data changes
 
 After that, I made the design look a bit better. It is still quite basic, but everything should be readable on different devices.
->>>>>>> wip-add-menu-data-objs
  
 ### **Website: [Next to the Wormhole](https://hurr-son.github.io/restaurant-page/)**
 
