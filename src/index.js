@@ -5,8 +5,6 @@ import { createHomeWrapEl } from './home-comp';
 import { createMenu } from './menu-comp';
 import { createContWrapEl } from './contact-comp';
 
-
-
 window.addEventListener('load', function(){
     const coverImg = new Image();
     coverImg.src = image;
