@@ -56,19 +56,27 @@ function createMenu() {
 
     for(let category in menuData) {
         let categoryWrapper = document.createElement('div');
-        categoryWrapper.className = `${category}-wrapper`
+        categoryWrapper.className = 'category-wrapper'
         let categoryTitle = document.createElement('h2');
         categoryTitle.innerHTML = category;
         menuWrapper.appendChild(categoryWrapper);
         categoryWrapper.appendChild(categoryTitle);
 
         menuData[category].forEach(item => {
-            let menuItem = document.createElement('li');
-            menuItem.innerHTML = `${item.name} - ${item.price} - ${item.desc}`;
-            menuItem.className = 'menu-item';
+            let menuItemName = document.createElement('li');
+            let menuItemPrice = document.createElement('li');
+            let menuItemDesc = document.createElement('li');
+            menuItemName.className = 'name'
+            menuItemPrice.className = 'price'
+            menuItemDesc.className = 'desc'
+            menuItemName.innerHTML = `${item.name}`;
+            menuItemPrice.innerHTML = `${item.price}`;
+            menuItemDesc.innerHTML = `${item.desc}`;
             let itemCard = document.createElement('div');
             itemCard.className = 'item-card';
-            itemCard.appendChild(menuItem);
+            itemCard.appendChild(menuItemName);
+            itemCard.appendChild(menuItemPrice);
+            itemCard.appendChild(menuItemDesc);
             categoryWrapper.appendChild(itemCard);
         })}
     return menuWrapper;
