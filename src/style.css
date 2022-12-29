@@ -23,7 +23,7 @@ time, mark, audio, video {
 
 :root {
 	--main-tx-color: white;
-	--main-bg-color: rgba(0, 0, 0, 0.3);
+	--main-bg-color: rgba(0, 0, 0, 0.2);
 	--main-nav-color: rgb(19, 13, 10);
 	--main-hov-color: rgb(162, 140, 133);
 }
@@ -38,7 +38,6 @@ body {
 	min-width: 1920px;
 	width: 100%;
 	position: fixed;
-	filter: brightness(65%);
 	top: 0;
 	left: 0;
 	z-index: -2;
@@ -54,6 +53,7 @@ body {
 .location-wrapper {
 	display: flex;
 }
+
 
 .navbar-wrapper {
 	align-items: center;
@@ -91,28 +91,40 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 4rem;	
-	
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	gap: 7rem;
+	margin-left: calc(20% - 1rem);
+	margin-right: calc(20% - 1rem);
+	background-color: var(--main-bg-color);
+}
+
+.home-wrapper > * {
+	flex-wrap: wrap;
+	font-size: 1.7rem;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0, 0.8);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	width: calc(70% - 1rem);
+	height: calc(50% - 1rem);
+	flex: 1;
 }
 
 .welcome-wrapper {
-	flex-wrap: wrap;
 	max-width: 45rem;
-	font-size: 1.6rem;
-	padding-bottom: 4rem;
+	padding: 1.5rem;
 }
 
 .hours-wrapper {
 	flex-direction: column;
-	font-size: 1.6rem;
-	padding-bottom: 2rem;
+	align-items: center;
+	max-width: fit-content;
 }
 
 .location-wrapper {
 	flex-direction: column;
-	font-size: 1.6rem;
-	max-width: 34rem;
-	padding-bottom: 7rem;
+	max-width: 25rem;
 }
 
 .hours-wrapper h3 {
@@ -131,42 +143,59 @@ li {
 
 /* Styling for the elements on the Menu Page */
 
+.menu-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.category-wrapper h2 {
+	font-size: 2.5rem;
+}
 
 .category-wrapper {
-	display: grid;
-	grid-template-columns: repeat(4, .2fr);
-	justify-content: space-evenly;
-	width: 100%;
-	column-gap: 5rem;
-	row-gap: 1.5rem;
-	padding-top: 5rem;
-	
-}
-
-.category-title {
-	font-size: 1.9rem;
-	font-weight: 600;
-}
-
-.dish-title {
-	font-size: 1.5rem;
-}
-
-.dishcard {
-	flex: 1;
-	gap: .75rem;
-	font-size: 1.2rem;
-	padding-bottom: 8rem;
-	flex-wrap: wrap;
-}
-
-.starter-wrapper,
-.entree-wrapper,
-.dessert-wrapper,
-.drink-wrapper {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	gap: 2rem;
+	margin-left: calc(7% - .5rem);
+	margin-right: calc(7% - .5rem);
+	background-color: var(--main-bg-color);
 }
+
+.item-card {
+	flex-wrap: wrap;
+	font-size: 1.7rem;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0, 0.8);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	width: calc(70% - 1rem);
+	height: calc(50% - 1rem);
+	flex: 1;
+}
+
+.name {
+	padding-bottom: 1rem;
+}
+
+
+@media (max-width: 799px) {
+	.menu-wrapper {
+		grid-template-columns: 1fr;
+	    grid-template-rows: 1fr;
+	}
+
+	.category-wrapper {
+		margin-left: calc(10% - 1rem);
+		margin-right: calc(10% - 1rem);
+	}
+}
+
+
+
 
 /* Styling for the elements on the Contact Page */
 
@@ -178,16 +207,32 @@ li {
 
 .contact-wrapper h2 {
 	font-size: 3rem;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0, 0.8);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .contact-wrapper {
 	align-items: center;
 	row-gap: 2rem;
-	padding-top: 5rem;
+	background-color: var(--main-bg-color);
+	padding-top: 7rem;
+	padding-bottom: 10rem;
+	margin-left: calc(25% - 1rem);
+	margin-right: calc(25% - 1rem);
+	
 }
 
 .contact-form {
 	row-gap: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0, 0.8);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .contact-wrapper > * {
